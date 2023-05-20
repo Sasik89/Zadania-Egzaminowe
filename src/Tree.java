@@ -54,8 +54,14 @@ public class Tree {
     }
 
     private int recursiveMin(Node currentNode) {
-        if (currentNode == null) return 0;
-        else if (currentNode.left == null) return currentNode.value;
-        else return recursiveMin(currentNode.left);
+        if (currentNode == null){
+            return 0;
+        }
+        else if (currentNode.left == null) {
+            return currentNode.value;
+        }
+        else {
+            return recursiveMin(currentNode.left);
+        }
     }
 }
